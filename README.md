@@ -28,6 +28,12 @@ In your code:
 ```go
 import "github.com/calvinrzachman/pay-to-contract"
 
+// Compute tweaked public key
+tPubX, tPubY := paytocontract.TweakAdd(publicKey, contract) 
+
+// Compute tweaked secret to sign for Q 
+tSecret := paytocontract.TweakSecretKey(privateKey, contract)
+
 ```
 
 ## Note
