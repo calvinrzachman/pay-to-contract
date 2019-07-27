@@ -18,6 +18,18 @@ Taproot Pay to Contract outputs can be spent in 2 ways:
 - Key spend - provide a BIP-Schnorr signature for the tweaked public key
 - Script spend - reveal the root of a merklized abstract syntax tree (MAST), a proof that the spending condition connects to the merkle root, and finally the script inputs 
 
+## Usage 
+Install using:
+ 
+    go get -u github.com/calvinrzachman/pay-to-contract
+
+In your code:
+
+```go
+import "github.com/calvinrzachman/pay-to-contract"
+
+```
+
 ## Note
 
 This implementation is for learning purposes only. Code from this repository should not be used in a production environment.

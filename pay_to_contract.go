@@ -82,7 +82,7 @@ func TweakAdd(publicKey *ecdsa.PublicKey, contract [32]byte) (qX, qY *big.Int) {
 	qX, qY = Curve.Add(publicKey.X, publicKey.Y, cX, cY)
 	// fmt.Println("Contract Point: ", cX, cY)
 	// fmt.Println("Tweaked Pub   : ", qX, qY)
-	return nil, nil
+	return qX, qY
 }
 
 // TweakSecretKey computes the modified secret key (w) corresponding to the
