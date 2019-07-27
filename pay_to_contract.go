@@ -78,26 +78,20 @@ func TweakAdd(publicKey *ecdsa.PublicKey, contract [32]byte) (qX, qY *big.Int) {
 	// Calculate the contract point C = H(...arbitrary data)*G
 	cX, cY := Curve.ScalarBaseMult(contract[:])
 
-	// Add internal public key to contract point Q = P + c*G Q = x*G + c*G
+	// Add internal public key to contract point Q = P + c*G
 	qX, qY = Curve.Add(publicKey.X, publicKey.Y, cX, cY)
-	// fmt.Println("Contract Point: ", cX, cY)
-	// fmt.Println("Tweaked Pub   : ", qX, qY)
 	return qX, qY
 }
 
 // TweakSecretKey computes the modified secret key (w) corresponding to the
 // tweaked public Q = w*G which can be used to spend UTXO with a ScriptPubKey
-// which commits to a tweaked public key
-// Usage: Modify the original private key x prior to signing
+// which commits to a tweaked public key.
+// Usage: Modify the original private key (x) prior to signing
 func TweakSecretKey(x *big.Int, contract [32]byte) *big.Int {
 	// Compute the tweaked secret ( x + c )
 	c := new(big.Int).SetBytes(contract[:])
 	tweakSecret := new(big.Int)
 	tweakSecret.Add(x, c)
 	tweakSecret.Mod(tweakSecret, Curve.N)
-	// fmt.Println("Contract Secret: ", c)
-	// fmt.Println("Tweak Secret   : ", tweakSecret)
-	// tX, tY := Curve.ScalarBaseMult(intToBytes(tweakSecret))
-	// fmt.Println("Tweaked Point : ", tX, tY)
 	return tweakSecret
 }
