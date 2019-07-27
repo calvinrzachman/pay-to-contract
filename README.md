@@ -1,6 +1,7 @@
-[![GoDoc](https://camo.githubusercontent.com/8609cfcb531fa0f5598a3d4353596fae9336cce3/68747470733a2f2f676f646f632e6f72672f6769746875622e636f6d2f79616e6777656e6d61692f686f772d746f2d6164642d62616467652d696e2d6769746875622d726561646d653f7374617475732e737667)](https://godoc.org/github.com/calvinrzachman/pay-to-contract)
 # pay-to-contract
 A simple Go implementation of Pay To Contract
+
+[![GoDoc](https://camo.githubusercontent.com/8609cfcb531fa0f5598a3d4353596fae9336cce3/68747470733a2f2f676f646f632e6f72672f6769746875622e636f6d2f79616e6777656e6d61692f686f772d746f2d6164642d62616467652d696e2d6769746875622d726561646d653f7374617475732e737667)](https://godoc.org/github.com/calvinrzachman/pay-to-contract)
 
 ## Overview
 Pay to Contract is a scheme which extends the classic Bitcoin Pay-to-Public-Key model, providing a path to notable improvements to the privacy, security, and fungibility of Bitcoin payments. Most basically, Pay to Contract is useful as it enables us to encode more information in a single public key and then use this information to provide more "spend-time" flexibility. It achieves this through alteration of the public key which allows for the encoding of arbitrary data.
