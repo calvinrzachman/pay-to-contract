@@ -8,7 +8,7 @@ Pay to Contract is a scheme which extends the classic Bitcoin Pay-to-Public-Key 
 
 The ability to have the public key commit to arbitrary data at "send-time" enables... and forms the underpinnings of [Taproot](https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2019-May/016914.html) Bitcoin Improvement Proposal
  
-Pay to Contrat/Taproot together with Schnorr signatures and a collaborative signature scheme like [MuSig](https://eprint.iacr.org/2018/068.pdf), allows any and all multi-signature and complex script based transactions to hit the blockchain with the same form as a normal Pay to Public Key Hash (P2PKH). Smart contract spends with the approval of all contract participants, such as the opening and collaborative closing of channels on Lightning Network, will appear no differently than any other transaction.
+Pay to Contract/Taproot together with Schnorr signatures and a collaborative signature scheme like [MuSig](https://eprint.iacr.org/2018/068.pdf), allows any and all multi-signature and complex script based transactions to hit the blockchain with the same form as a normal Pay to Public Key Hash (P2PKH). Smart contract spends with the approval of all contract participants, such as the opening and collaborative closing of channels on Lightning Network, will appear no differently than any other transaction.
 
 Under [BIP-Taproot](https://github.com/sipa/bips/blob/bip-schnorr/bip-taproot.mediawiki) the data is itself a commitment in form of a merkle root whose leaves are comprised of Bitcoin scripts specifying the various spending conditions for the transaction output (see [M.A.S.T](https://bitcointechtalk.com/what-is-a-bitcoin-merklized-abstract-syntax-tree-mast-33fdf2da5e2f)).
 
