@@ -40,7 +40,7 @@ This implementation is for learning purposes only. Code from this repository sho
 
 ## Acknowledgements
 
-Many thanks go out to Andrew Poelstra for documentation and presentations on the ideas implemented here. This repository could not have been completed without the viewing of several of his recorded talks on YouTube 
+Many thanks go out to Blockstream's Andrew Poelstra and Jonas Nick for documentation and presentations on the ideas implemented here. This repository could not have been completed without the viewing of several of their recorded talks on YouTube 
 
 
 ### Helpful Links
